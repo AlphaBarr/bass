@@ -31,6 +31,6 @@ public class AddressRepository {
     public List<Address> getAddresses(){
     	Session s = sessionFactory.getCurrentSession();
     	Query q = s.getNamedQuery("getAddresses");
-    	return q.list();
+		return (List<Address>) q.list();
     }
 }
